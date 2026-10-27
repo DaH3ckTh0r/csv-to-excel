@@ -10,7 +10,7 @@ jobs:
     name: BDD spec is identical in both projects
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: diff -u src/typescript/features/convert.feature src/python/features/convert.feature
 
   typescript:
@@ -25,7 +25,7 @@ jobs:
       run:
         working-directory: src/typescript
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
@@ -51,7 +51,7 @@ jobs:
       run:
         working-directory: src/python
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
