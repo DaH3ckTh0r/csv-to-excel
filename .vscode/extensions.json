@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "vitest.explorer",
+    "cucumberopen.cucumber-official",
+    "editorconfig.editorconfig"
+  ]
+}

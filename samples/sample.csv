@@ -1,0 +1,7 @@
+id,name,email,city,amount,zip,active,notes
+1,"Pérez, Ana",ana@example.com,Madrid,1250.50,00123,true,"VIP customer"
+2,Luis Gómez,luis@example.com,Ciudad de México,-300,90210,false,"Said ""call me later"""
+3,María López,maria@example.com,Bogotá,0.75,08001,TRUE,"Two-line note:
+second line"
+4,John Smith,john@example.com,New York,42,10001,FALSE,
+5,,,,,,,"Row with mostly empty fields"

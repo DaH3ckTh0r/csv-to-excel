@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TS: Debug CLI (sample.csv)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/typescript",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${workspaceFolder}/src/typescript/src/cli.ts",
+      "args": ["../../samples/sample.csv", "../../samples/sample-ts.xlsx", "--table"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+    },
+    {
+      "name": "TS: Debug current test file",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/typescript",
+      "program": "${workspaceFolder}/src/typescript/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${file}"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+    },
+    {
+      "name": "TS: Debug BDD scenarios",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/typescript",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${workspaceFolder}/src/typescript/node_modules/@cucumber/cucumber/bin/cucumber.js",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+    },
+    {
+      "name": "Python: Debug CLI (sample.csv)",
+      "type": "debugpy",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/python",
+      "module": "csv2xlsx",
+      "args": ["../../samples/sample.csv", "../../samples/sample-py.xlsx", "--table"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Debug current test file",
+      "type": "debugpy",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/python",
+      "module": "pytest",
+      "args": ["${file}", "-v"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: Debug BDD scenarios",
+      "type": "debugpy",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/python",
+      "module": "behave",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
